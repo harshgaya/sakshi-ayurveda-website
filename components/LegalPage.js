@@ -1,0 +1,2 @@
+import SiteHeader from './SiteHeader'; import SiteFooter from './SiteFooter'; import PageHero from './PageHero';
+export default function LegalPage({eyebrow,title,intro,children}){return <><SiteHeader/><main><PageHero eyebrow={eyebrow} title={title} text={intro}/><article className="mx-auto max-w-3xl px-5 py-16 text-[#405447]"><div className="rounded-3xl bg-white p-7 leading-7 shadow-sm md:p-10">{children}</div></article></main><SiteFooter/></>}

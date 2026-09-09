@@ -1,0 +1,1 @@
+export default function PageHero({eyebrow,title,text}){return <section className="grid-lines border-b border-[#e7dfd0] px-5 py-20 text-center"><p className="eyebrow">{eyebrow}</p><h1 className="serif mx-auto mt-4 max-w-3xl text-4xl leading-tight md:text-6xl">{title}</h1>{text&&<p className="mx-auto mt-5 max-w-2xl leading-7 text-[#52685a]">{text}</p>}</section>}
