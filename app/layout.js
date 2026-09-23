@@ -34,8 +34,8 @@ export const metadata = {
     images: [
       {
         url: "/details.png",
-        width: 1200,
-        height: 630,
+        width: 1920,
+        height: 1080,
         alt: "Sakshi Ayurveda & Panchkarma Centre",
       },
     ],

@@ -12,6 +12,7 @@ import {
   therapyGroups,
 } from "../lib/siteConfig";
 import Gallery from "../components/gallery";
+import AyurvedaHeritage from "../components/AyurvedaHeritage";
 export default function Home() {
   return (
     <>
@@ -123,6 +124,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <AyurvedaHeritage />
         <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
           <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
