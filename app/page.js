@@ -13,6 +13,7 @@ import {
 } from "../lib/siteConfig";
 import Gallery from "../components/gallery";
 import AyurvedaHeritage from "../components/AyurvedaHeritage";
+import FeaturedMedicines from "../components/FeaturedMedicines";
 export default function Home() {
   return (
     <>
@@ -59,8 +60,13 @@ export default function Home() {
                   Get directions
                 </a>
               </div>
-              <p className="mt-8 text-sm text-[#52685a]">
-                ✦ {siteConfig.doctor} • Personalised care after consultation
+              <p className="mt-8 text-[#52685a]">
+                <span className="block text-2xl font-extrabold text-[#31513c] md:text-3xl">
+                  Dr. Ajay Kumar
+                </span>
+                <span className="mt-1 block text-sm font-medium">
+                  (Ayurvedacharya) • Personalised care after consultation
+                </span>
               </p>
             </div>
             <div className="relative h-[420px] md:absolute md:inset-y-0 md:right-0 md:h-auto md:w-[52%]">
@@ -228,6 +234,7 @@ export default function Home() {
             </Link>
           </div>
         </section>
+        <FeaturedMedicines />
         <ContactCta />
       </main>
       <SiteFooter />

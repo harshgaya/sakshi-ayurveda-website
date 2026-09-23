@@ -10,13 +10,13 @@ const heritage = [
   {
     name: "Atreya",
     title: "The Great Physician",
-    image: "/heritage/atreya.jpeg",
+    image: "/heritage/atreya.jpg",
     text: "Associated with the physician tradition of Ayurveda and the teachings that shaped early classical medicine.",
   },
   {
     name: "Charaka",
     title: "Master of Internal Medicine",
-    image: "/heritage/charak.png",
+    image: "/heritage/charak.jpg",
     text: "Associated with the Charaka Samhita, one of Ayurveda's foundational texts on internal medicine.",
   },
   {
