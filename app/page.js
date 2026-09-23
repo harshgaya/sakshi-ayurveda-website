@@ -5,11 +5,13 @@ import SiteFooter from "../components/SiteFooter";
 import TreatmentGrid from "../components/TreatmentGrid";
 import VideoTestimonial from "../components/VideoTestimonial";
 import ContactCta from "../components/ContactCta";
+
 import {
   siteConfig,
   testimonialVideos,
   therapyGroups,
 } from "../lib/siteConfig";
+import Gallery from "../components/gallery";
 export default function Home() {
   return (
     <>
@@ -59,7 +61,39 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+        <section className="py-5">
+          <div className="mx-auto max-w-7xl px-5 lg:px-8">
+            <div className="mb-8 flex items-end justify-between">
+              <div>
+                <p className="eyebrow">Patient video stories</p>
+                <h2 className="serif mt-3 text-4xl">
+                  Real journeys, shared gently.
+                </h2>
+              </div>
+              <p className="hidden text-sm text-[#647268] md:block">
+                Swipe to explore →
+              </p>
+            </div>
+            <div className="flex snap-x gap-5 overflow-x-auto pb-5 [scrollbar-width:thin]">
+              {testimonialVideos.map((testimonial) => (
+                <div
+                  key={`${testimonial.name}-${testimonial.videoUrl}`}
+                  className="w-[72vw] shrink-0 snap-start sm:w-[280px]"
+                >
+                  <VideoTestimonial
+                    name={testimonial.name}
+                    condition={testimonial.condition}
+                    quote={testimonial.quote}
+                    color={testimonial.color}
+                    videoUrl={testimonial.videoUrl}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <Gallery />
+        <section className="mx-auto max-w-7xl px-5 py-0 lg:px-8">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
               <p className="eyebrow">Meet your physician</p>
@@ -81,7 +115,7 @@ export default function Home() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem]">
               <Image
-                src="/images/doctor-consultation.png"
+                src="/images/dr_with_patient.png"
                 alt="Ayurvedic consultation"
                 fill
                 className="object-cover"
@@ -151,37 +185,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-20">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="mb-8 flex items-end justify-between">
-              <div>
-                <p className="eyebrow">Patient video stories</p>
-                <h2 className="serif mt-3 text-4xl">
-                  Real journeys, shared gently.
-                </h2>
-              </div>
-              <p className="hidden text-sm text-[#647268] md:block">
-                Swipe to explore →
-              </p>
-            </div>
-            <div className="flex snap-x gap-5 overflow-x-auto pb-5 [scrollbar-width:thin]">
-              {testimonialVideos.map((testimonial) => (
-                <div
-                  key={`${testimonial.name}-${testimonial.videoUrl}`}
-                  className="w-[72vw] shrink-0 snap-start sm:w-[280px]"
-                >
-                  <VideoTestimonial
-                    name={testimonial.name}
-                    condition={testimonial.condition}
-                    quote={testimonial.quote}
-                    color={testimonial.color}
-                    videoUrl={testimonial.videoUrl}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
         <section className="mx-auto grid max-w-7xl gap-8 px-5 py-12 lg:grid-cols-[1fr_.9fr] lg:px-8">
           <div className="relative min-h-80 overflow-hidden rounded-[2rem]">
             <Image
