@@ -38,8 +38,21 @@ export default function Home() {
                 >
                   Call {siteConfig.phoneDisplay}
                 </a>
+
+                <a
+                  href={`https://wa.me/91${siteConfig.whatsapp}?text=${encodeURIComponent(
+                    "Hello, sir. I want to book a consultation.",
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white"
+                >
+                  WhatsApp
+                </a>
+
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={siteConfig.mapsUrl}
                   className="rounded-full border border-[#31513c] px-6 py-3.5 text-sm font-bold"
                 >
